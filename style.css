@@ -1,182 +1,207 @@
 /*-------------Reset-------------*/
 button {
-	background: none;
-	box-shadow: none;
-	border: none;
-	cursor: pointer;
+  background: none;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
 }
-button:focus, input:focus {
-	outline: 0;
+button:focus,
+input:focus {
+  outline: 0;
 }
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 /*-------------Layout-------------*/
 body {
-	line-height: 1.5em;
-	padding: 0;
-	margin: 0;
-	color: white !important;
+  line-height: 1.5em;
+  padding: 0;
+  margin: 0;
+  color: white !important;
 }
 section {
-	height: 100vh;
+  height: 100vh;
 }
 main {
-	position: relative; 
-	color: black;
+  position: relative;
+  color: black;
 }
 #home {
-	background-color: #ddd;
+  background-color: #ddd;
 }
 #about {
-	background-color: #aaa;
+  background-color: #aaa;
 }
 #work {
-	background-color: #888;
+  background-color: #888;
 }
 #contact {
-	background-color: #666;
+  background-color: #666;
 }
 /*-------------Helpers-------------*/
 .skew {
-	transform: skew(-20deg);
+  transform: skew(-20deg);
 }
 .un-skew {
-	transform: skew(20deg);
+  transform: skew(20deg);
 }
 /*-------------Nav-------------*/
 #nav-wrapper {
-	overflow: hidden;
-	width: 100%;
-	margin: 0 auto;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 100;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 #nav {
-	background-color: #fff;
-	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-	display: flex;
-	flex-direction: column;
-	font-family: "Saira Semi Condensed", sans-serif;
-	height: 4em;
-	overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  font-family: "Saira Semi Condensed", sans-serif;
+  height: 4em;
+  overflow: hidden;
 }
 #nav.nav-visible {
-	height: 100%;
-	overflow: auto;
+  height: 100%;
+  overflow: auto;
 }
 .nav {
-	display: flex;
-	height: 4em;
-	line-height: 4em;
-	flex-grow: 1;
+  display: flex;
+  height: 4em;
+  line-height: 4em;
+  flex-grow: 1;
 }
-.nav-link, .logo {
-	padding: 0 1em;
+.nav-link,
+.logo {
+  padding: 0 1em;
 }
 a#nav-logo-text {
-	color: white !important;
+  color: white !important;
 }
 span.gradient {
-	background: #f857a8;
-	background: -webkit-linear-gradient(45deg, #f857a8, #ff5858);
-	background: linear-gradient(45deg, #f857a8, #ff5858);
-	padding: 0 1em;
-	position: relative;
-	right: 1em;
-	margin-right: auto;
+  background: #f857a8;
+  background: -webkit-linear-gradient(45deg, #f857a8, #ff5858);
+  background: linear-gradient(45deg, #f857a8, #ff5858);
+  padding: 0 1em;
+  position: relative;
+  right: 1em;
+  margin-right: auto;
 }
 span.gradient:hover {
-	animation-name: logo-hover;
-	animation-duration: 0.3s;
-	animation-fill-mode: forwards;
-	animation-timing-function: cubic-bezier(0.17, 0.57, 0.31, 0.85);
+  animation-name: logo-hover;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.17, 0.57, 0.31, 0.85);
 }
 span.logo {
-	font-weight: 300;
-	font-size: 1.75em;
-	line-height: 0.75em;
-	color: #fff;
+  font-weight: 300;
+  font-size: 1.75em;
+  line-height: 0.75em;
+  color: #fff;
 }
 span.logo a {
-	text-decoration: none;
-	color: #fff;
+  text-decoration: none;
+  color: #fff;
 }
 .nav-link {
-	text-transform: uppercase;
-	text-align: center;
-	border-top: 0.5px solid #ddd;
+  text-transform: uppercase;
+  text-align: center;
+  border-top: 0.5px solid #ddd;
 }
 a {
-	text-decoration: none;
-	color: #f857a8;
+  text-decoration: none;
+  color: #f857a8;
 }
 a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 .right {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .btn-nav {
-	color: #f857a8;
-	padding-left: 2em;
-	padding-right: 2em;
+  color: #f857a8;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 @media (min-width: 800px) {
-	#nav-wrapper {
-		overflow: hidden;
-	}
-	#nav {
-		overflow: hidden;
-		flex-direction: row;
-	}
-	.nav-link {
-		border-top: none;
-	}
-	.right {
-		overflow: hidden;
-		flex-direction: row;
-		justify-content: flex-end;
-		position: relative;
-		left: 1.5em;
-		height: auto;
-	}
-	.btn-nav {
-		display: none;
-	}
-	.nava:link.active {
-		background: #f857a8;
-		background: -webkit-linear-gradient(45deg, #f857a8, #ff5858);
-		background: linear-gradient(45deg, #f857a8, #ff5858);
-		color: #fff;
-	}
-	.nav-link-span {
-		transform: skew(20deg);
-		display: inline-block;
-	}
-	.nav-link {
-		transform: skew(-20deg);
-		color: #777;
-		text-decoration: none;
-	}
-	.nav-link:last-child {
-		padding-right: 3em;
-	}
-	a:hover.nav-link:not(.active) {
-		color: #444;
-		background: #ddd;
-		background: linear-gradient(45deg, #fff, #ddd);
-	}
+  #nav-wrapper {
+    overflow: hidden;
+  }
+  #nav {
+    overflow: hidden;
+    flex-direction: row;
+  }
+  .nav-link {
+    border-top: none;
+  }
+  .right {
+    overflow: hidden;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+    left: 1.5em;
+    height: auto;
+  }
+  .btn-nav {
+    display: none;
+  }
+  .nava:link.active {
+    background: #f857a8;
+    background: -webkit-linear-gradient(45deg, #f857a8, #ff5858);
+    background: linear-gradient(45deg, #f857a8, #ff5858);
+    color: #fff;
+  }
+  .nav-link-span {
+    transform: skew(20deg);
+    display: inline-block;
+  }
+  .nav-link {
+    transform: skew(-20deg);
+    color: #777;
+    text-decoration: none;
+  }
+  .nav-link:last-child {
+    padding-right: 3em;
+  }
+  a:hover.nav-link:not(.active) {
+    color: #444;
+    background: #ddd;
+    background: linear-gradient(45deg, #fff, #ddd);
+  }
 }
 @keyframes logo-hover {
-	20% {
-		padding-right: 0;
-	}
-	100% {
-		padding-right: 5em;
-	}
+  20% {
+    padding-right: 0;
+  }
+  100% {
+    padding-right: 5em;
+  }
+}
+
+.media {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-53%, -50%);
+}
+li {
+  list-style: none;
+  margin: 10px 30px;
+  display: inline-block;
+  font-size: 20px;
+  padding: 20px 20px;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+li:hover {
+  color: #292929;
+  border: 1px solid #292929;
+  transition: 0.5s;
 }
