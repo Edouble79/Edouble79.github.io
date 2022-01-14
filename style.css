@@ -17,17 +17,17 @@ body {
   line-height: 1.5em;
   padding: 0;
   margin: 0;
-  color: white !important;
+  color: #176d6e; !important;
 }
 section {
   height: 100vh;
 }
 main {
   position: relative;
-  color: black;
+  color: white;
 }
 #home {
-  background-color: #ddd;
+  background-color: white;
 }
 #about {
   background-color: #aaa;
@@ -54,9 +54,10 @@ main {
   top: 0;
   left: 0;
   z-index: 100;
+  color: #176d6e;
 }
 #nav {
-  background-color: #fff;
+  background-color: teal;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -113,7 +114,7 @@ span.logo a {
 }
 a {
   text-decoration: none;
-  color: #f857a8;
+  color: white;
 }
 a:hover {
   text-decoration: underline;
@@ -151,9 +152,9 @@ a:hover {
     display: none;
   }
   .nava:link.active {
-    background: #f857a8;
+    background: white;
     background: -webkit-linear-gradient(45deg, #f857a8, #ff5858);
-    background: linear-gradient(45deg, #f857a8, #ff5858);
+    background: linear-gradient(45deg, white, white);
     color: #fff;
   }
   .nav-link-span {
@@ -162,7 +163,7 @@ a:hover {
   }
   .nav-link {
     transform: skew(-20deg);
-    color: #777;
+    color: #eee;
     text-decoration: none;
   }
   .nav-link:last-child {
@@ -175,7 +176,7 @@ a:hover {
   }
 }
 @keyframes logo-hover {
-  20% {
+  30% {
     padding-right: 0;
   }
   100% {
@@ -204,4 +205,29 @@ li:hover {
   color: #292929;
   border: 1px solid #292929;
   transition: 0.5s;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.page-content {
+  min-height: 100%;
+  margin-bottom: -120px;
+}
+
+.page-content::after {
+  content: "";
+  display: block;
+}
+
+footer,
+.page-content::after {
+  height: 1px;
+}
+
+body {
+  background-color: cadetblue;
 }
